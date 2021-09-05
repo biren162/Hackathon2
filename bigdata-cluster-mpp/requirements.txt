@@ -12,3 +12,4 @@ typing-extensions==3.10.0.2
 zipp==3.5.0
 tweepy==3.10.0
 pandas
+findspark

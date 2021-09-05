@@ -44,7 +44,7 @@ RUN sudo apt install software-properties-common -y
 #RUN sudo add-apt-repository ppa:deadsnakes/ppa -y
 RUN sudo apt update
 RUN sudo apt-get install python3.7 -y
-RUN wget -P /spark/jar/ https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.8/spark-streaming-kafka-0-8-assembly_2.11-2.4.8.jar
+RUN wget -P /spark/spark-2.3.2-bin-hadoop2.7/jars https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8-assembly_2.11/2.4.8/spark-streaming-kafka-0-8-assembly_2.11-2.4.8.jar
 
 
 #********************************************* Moving ~/.bash_profile to /etc/profile.d/ to get env variables to all users ****************
