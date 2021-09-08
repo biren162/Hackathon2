@@ -32,7 +32,7 @@ class NpEncoder(json.JSONEncoder):
             return obj.tolist()
         return super(NpEncoder, self).default(obj)
 
-for i in range(10):
+for i in range(df.shape[0]):
     record_dict = df.iloc[i].to_dict()
     print("sending...", str(record_dict))
     producer.send(KAFKA_TOPIC, json.dumps(record_dict,cls=NpEncoder).encode("utf-8"))
