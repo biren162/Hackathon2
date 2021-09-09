@@ -1,6 +1,6 @@
 # Steps to run
 
-## Terminal-1
+## Terminal-1 (Model Training, Producer)
 
 docker exec -it bigdata-cluster-mpp bash
 
@@ -10,7 +10,7 @@ python3 model_generator.py
 
 python3 house_producer.py
 
-## Terminal-2
+## Terminal-2 (Consumer with Predictor)
 
 docker exec -it bigdata-cluster-mpp bash
 
@@ -31,3 +31,9 @@ kafka-topics.sh --create --topic house --bootstrap-server 127.0.0.1:9092 --parti
 topic content:
 kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic house --from-beginning
 
+
+## Model training - Notebook
+
+Trained and compared three models Random forest Regression, XGboost Regression, Linear Regression
+Notebook Name: DataAnalysisAndModelCreation.ipynb
+ 
